@@ -1,4 +1,3 @@
-
 // Your apiRoutes.js file should contain two routes:
 
 // A GET route with the url /api/friends. This will be used to display a JSON of all possible friends.
@@ -7,48 +6,71 @@
 
 // Convert each user's results into a simple array of numbers (ex: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]).
 // With that done, compare the difference between current user's scores against those from other users, question by question. Add up the differences to calculate the totalDifference.
-var friendsData = require('../data/friends');
+var friendsData = require("../data/friends");
 
-module.exports = function(app){
-    app.get('/api/friends',function(request, resp){
-        resp.json(friendsData);
-    });
-    app.post('/api/friends',function(reqSent, rly){
-        // capture user input
-        var userInput = req.body;
-        console.log('input: ' + userInput);
-        // getting user's score
-        var userScore = userInput.score;
-        console.log('score: '+ userScore);
+module.exports = function(app) {
+  app.get("/api/friends", function(request, resp) {
+    resp.json(friendsData);
+  });
+  app.post("/api/friends", function(reqSent, rly) {
+    // capture user input
+    var userInput = reqSent.body;
+    console.log("line 19, userinput", JSON.stringify(userInput));
 
-        // variables for matches
-        var bff = 
-            {
-                name:'',
-                pic: '',
-                score: 40
-            }
-        
-        var matchImg;
-        
-       
 
-        // loop thru the friendsData arr
-        for ( var i = 0; i < friendsData.length; i++){
-            var totalDifference = 0;
-            for(var j = 0; j< userScore.length; j ++){
-                diff = Math.abs(friendsData[j].score - userScore[j]);
-                console.log('diff', diff);
-                var totalDifference = diff + totalDifference;
-                console.log('total', totalDifference);
-                if(totalDifference <= bff.score){
-                    bff.name = friendsData[i].name;
-                    bff.pic = friendsData[i].pic;
-                    bff.score = friendsData[i].score;
-                }
-            }
-        }
-        friendsData.push(userInput);
-        res.json(bff);
-    })
-}
+    // variables for matches
+    var bff = {
+      name: "",
+      pic: "",
+      score: 1000
+    };
+
+    var totalDifference = 0;
+
+    // var friendScore = friendsData.score;
+    var userScore = userInput.score;
+    // function findSum (arr1, arr2){
+    //     var sum1 = 0;
+    //     var sum2 = 0;
+
+    //     for ( var i = 0; i <friendScore.length; i ++){
+
+    //         sum1=sum1 + friendScore[i];
+    //         console.log('friend sum', newFriendSum[i]);
+    //     }
+    //     for (var j = 0; j< userScore.length; j++){
+
+    //         sum2 = sum2 + userSum[j];
+    //         console.log('user sum', userSum);
+    //     }
+    // }
+    // findSum(friendScore,userScore);
+    // for (var j = 0; j < userScore.length; j++) {
+    //   var userNums = userScore[j];
+    //   var userSum = 0;
+    //   userSum = userSum + parseInt(userNums[j]);
+    //   console.log("user sum 1", userSum);
+    // }
+
+    // [3,5],[1,4]
+    // loop thru the friendsData arr
+    for (var i = 0; i < friendsData.length; i++) {
+      var diff = 0;
+      var currentFriend = friendsData[i];
+
+      for (var j = 0; j < userScore.length; j++) {
+        diff = diff + Math.abs(parseInt(userScore[j]) - parseInt(currentFriend.score[j]));
+        console.log(currentFriend.name + " line 42 diff", diff);
+      }
+      if (diff <= bff.score) {
+        bff.name = currentFriend.name;
+        bff.pic = currentFriend.pic;
+        bff.score = diff;
+        console.log(bff.name,'name')
+      }
+    }
+    friendsData.push(userInput);
+    console.log(userInput, "userInput");
+    rly.json(bff);
+  });
+};
