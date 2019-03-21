@@ -12,6 +12,10 @@ module.exports = function(app) {
   app.get("/api/friends", function(request, resp) {
     resp.json(friendsData);
   });
+  app.get('/', function(req,resp){
+      resp.sendFile(__dirname ,'home.html')
+  });
+
   app.post("/api/friends", function(reqSent, rly) {
     // capture user input
     var userInput = reqSent.body;

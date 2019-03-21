@@ -7,9 +7,11 @@
     <title>Friend Finder</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <!-- load jq first before bootstrap so the modal can load -->
     <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+   
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 
   
@@ -50,7 +52,7 @@
             </div>
 
             <div class="form-row align-items-center">
-                <div class="col-auto my-1">
+                <div class="col">
                    <p for='q2'>Are you outspoken?</p>
                    <select class="custom-select mr-sm-2" id="q2">
                         <option selected>Choose...</option>
@@ -117,21 +119,21 @@
                 <button type="button" id='submit' class="btn btn-primary btn-lg btn-block">Submit</button>
             
             <a href="/api/friends">API Friend List |</a>
-            <a href="#">Git Hub Repo</a>
+            <a href="#">Git Hub Repo |</a>
+            <a href="/">Go Back </a>
 
         
-<div id='bff-modal' class='modal fade'>
-<div class="modal" tabindex="-1" role4="dialog">
+<div id='bff-modal' class="modal fade" tabindex="-1" role4="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">New BFF!</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <!-- <button type="button" class="close" data-toggle="modal" data-target="#bff-modal"data-dismiss="modal" aria-label="Close"> -->
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p id='match'>Modal body text goes here.</p>
+        <p id='match'>Here is your match!!.</p>
         <img id='matchPic' src=''>
       </div>
       <div class="modal-footer">
@@ -140,11 +142,12 @@
     </div>
   </div>
 </div>
- </div>
+ 
 
     </div>
     <script type="text/javascript">
         $('#submit').on('click', function(){
+            // $('#bff-modal').modal('show');
             event.preventDefault();
             var userInput = {
                 name: $('#name').val().trim(),
@@ -158,8 +161,8 @@
         $.post('/api/friends', userInput,function(data){
             $('#match').html(data.name);
             $('#matchPic').attr('src', data.pic);
-            // $('#bff-modal').modal('toggle');
-            alert('name: '+ data.name + '/n' + data.pic )
+            $('#bff-modal').modal('toggle');
+            // alert('name: '+ data.name + '/n' + data.pic )
 
         });
         });
