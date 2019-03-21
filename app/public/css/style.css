@@ -1,7 +1,10 @@
-.select.custom-select.mr-sm-2{
-    width:50px;
+select.col.form-control{
+    width:180px;
     border:2px red dotted;
 }
 body {
     background-color:rgb(177, 190, 177);
+}
+img#matchPic {
+    width:100%;
 }

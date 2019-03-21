@@ -51,12 +51,52 @@ var friendsData = [
     {
         name:'Sven',
         pic:'http://images6.fanpop.com/image/photos/35300000/Sven-frozen-35371262-245-246.gif',
-        score:[3,5]
+        score:[1,3,5,5,4,3,2,5,3,2]
     },
     {
         name:'The Pua Pig',
         pic:'https://media1.tenor.com/images/dfe72f5d4629d622647585525362a810/tenor.gif?itemid=12579509',
-        score:[1,4]
+        score:[4,1,5,3,2,4,3,2,5,2]
+    },
+    {
+        name:'Dory',
+        pic:'https://media.giphy.com/media/Iyt1e8Hq8Xp60/giphy.gif',
+        score:[3,4,1,5,2,4,5,5,2,4]
+    },
+    {
+        name:'Vanellope von Schweetz',
+        pic:'https://media.giphy.com/media/CBv2i3NhSL3CU/giphy.gif',
+        score:[3,2,4,1,5,4,2,3,3,4]
+    },
+    {
+        name:'Olaf',
+        pic:'https://media.giphy.com/media/jEzTFBkeHrjgY/giphy.gif',
+        score:[3,2,5,2,1,2,3,4,2]
+    },
+    {
+        name:'Tigger',
+        pic:'https://media.giphy.com/media/T4ryxpy4m79G8/giphy.gif',
+        score:[2,3,4,5,2,1,3,3,2,4]
+    },
+    {
+        name:'Mushu',
+        pic:'https://media.giphy.com/media/nC6dJjAC83F4Y/giphy.gif',
+        score:[2,4,4,5,3,2,1,3,2,5]
+    },
+    {
+        name:'Baymax',
+        pic:'https://media.giphy.com/media/CQw94V8AMa556/giphy.gif',
+        score:[5,4,3,2,3,2,5,1,4,2]
+    },
+    {
+        name:'Maximus',
+        pic:'https://media.giphy.com/media/GI1kfuiI4Tzgc/giphy.gif',
+        score:[2,3,2,5,4,4,2,3,1,3]
+    },
+    {
+        name:'Edna Mode',
+        pic:'https://media.giphy.com/media/RXFiL6IR083II/giphy.gif',
+        score:[5,4,3,3,5,4,2,3,5,1]
     },
     
 ]
