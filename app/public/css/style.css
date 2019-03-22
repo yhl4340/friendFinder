@@ -2,9 +2,20 @@ select.col.form-control{
     width:180px;
     border:2px red dotted;
 }
-body {
-    background-color:rgb(177, 190, 177);
-}
+
 img#matchPic {
     width:100%;
+}
+#userPic {
+    display: relative;
+}
+#userName {
+    display: inline;
+    position: absolute;
+
+    overflow: clear;
+    margin-left:15px;
+    font-size: 18px;
+    font-weight: bold;
+
 }

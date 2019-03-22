@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,56 +8,38 @@
     <title>Friend Finder</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- load jq first before bootstrap so the modal can load -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-   
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 
-  
-    
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 </head>
+
 <body>
     <div class="container">
 
         <form>
             <h2>Survey Questions</h2>
-            <hr/>
-                <div class="form-group">
-                <h3>About You</h3>
-                  <label for="name">Name <small> (Required)</small></label>
-                  <input type="text" class="form-control" id="name" placeholder="Your name">
-                </div>
-                <div class="form-group">
-                  <label for="photoLink">Link to photo image <small>(Required)</small></label>
-                  <input type="text" class="form-control" id="photoLink">
-                </div>
-                <hr/>
+            <hr />
+            <div class="form-group">
+                <h2>About You</h2>
+                <label for="name">Name <small> (Required)</small></label>
+                <input type="text" class="form-control" id="name" placeholder="Your name">
+            </div>
+            <div class="form-group">
+                <label for="photoLink">Link to photo image <small>(Required)</small></label>
+                <input type="text" class="form-control" id="photoLink">
+            </div>
+            <hr />
         </form>
 
         <form>
-                
             <div class="form-row align-items-center">
                 <div class="col-auto my-1">
                     <h3>Question 1</h3>
                     <h5>Do you consider yourself having a good sense of humor?</h5>
-                        <select class="col form-control" id='q1'>
-                            <option selected>Choose...</option>
-                            <option value="1">1 (Strongly Agree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5(Strongly Disagree)</option>
-                        </select>
-                </div>
-            </div>
-
-            <div class="form-row align-items-center">
-                <div class="col-auto my-1">
-                   <h3>Question 2</h3>
-                   <h5 >Are you outspoken?</h5>
-                   <select class="col form-control" id="q2">
+                    <select class="col form-control" id='q1'>
                         <option selected>Choose...</option>
                         <option value="1">1 (Strongly Agree)</option>
                         <option value="2">2</option>
@@ -67,41 +50,55 @@
                 </div>
             </div>
 
-            
+            <div class="form-row align-items-center">
+                <div class="col-auto my-1">
+                    <h3>Question 2</h3>
+                    <h5>Are you outspoken?</h5>
+                    <select class="col form-control" id="q2">
+                        <option selected>Choose...</option>
+                        <option value="1">1 (Strongly Agree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5(Strongly Disagree)</option>
+                    </select>
+                </div>
+            </div>
+
             <div class="form-row align-items-center">
                 <div class="col-auto my-1">
                     <h3>Question 3(dory)</h3>
                     <h5>Glass half full or Glass half empty</h5>
-                        <select class="col form-control" id="q3">
-                            <option selected>Choose...</option>
-                            <option value="1">1 (Strongly Agree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="3">4</option>
-                            <option value="3">5(Strongly Disagree)</option>
-                        </select>
+                    <select class="col form-control" id="q3">
+                        <option selected>Choose...</option>
+                        <option value="1">1 (Strongly Agree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="3">4</option>
+                        <option value="3">5(Strongly Disagree)</option>
+                    </select>
                 </div>
             </div>
 
-             <div class="form-row align-items-center">
-                <div class="col-auto my-1">
-                    <h3>Question 4(Vanellope von Schweetz)</h3>
-                    <h5>Do you think you are sassy and always see the good in people?</h5>
-                        <select class="col form-control" id="q4">
-                            <option selected>Choose...</option>
-                            <option value="1">1 (Strongly Agree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="3">4</option>
-                            <option value="3">5(Strongly Disagree)</option>
-                        </select>
-                </div>
-            </div>
-
-            
             <div class="form-row align-items-center">
                 <div class="col-auto my-1">
-                    <h3 >Question 5(olaf)</h3>
+                    <h3>Question 4</h3>
+                    <h5>Do you think you are sassy and always see the good in people?</h5>
+                    <select class="col form-control" id="q4">
+                        <option selected>Choose...</option>
+                        <option value="1">1 (Strongly Agree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="3">4</option>
+                        <option value="3">5(Strongly Disagree)</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="form-row align-items-center">
+                <div class="col-auto my-1">
+                    <h3 >Question 5</h3>
                     <h5>Do you consider youself goofy?</h5>
                         <select class="col form-control" id="q5">
                             <option selected>Choose...</option>
@@ -116,7 +113,7 @@
             
             <div class="form-row align-items-center">
                     <div class="col-auto my-1">
-                        <h3 id=>Question 6(tigger)</h3>
+                        <h3 id=>Question 6</h3>
                         <h5>Are you very confident, undertaking tasks with a gusto?</h5>
                             <select class="col form-control" id="q6">
                                 <option selected>Choose...</option>
@@ -131,7 +128,7 @@
             
                  <div class="form-row align-items-center">
                         <div class="col-auto my-1">
-                            <h3>Question 7(mushu)</h3>
+                            <h3>Question 7</h3>
                             <h5>Are you impulsive?</h5>
                                 <select class="col form-control" id="q7">
                                     <option selected>Choose...</option>
@@ -146,7 +143,7 @@
                     
                     <div class="form-row align-items-center">
                             <div class="col-auto my-1">
-                                <h3>Question 8(baymax)</h3>
+                                <h3>Question 8</h3>
                                 <h5>Are you calm and easily distracted?</h5>
                                     <select class="col form-control" id="8">
                                         <option selected>Choose...</option>
@@ -161,7 +158,7 @@
 
                         <div class="form-row align-items-center">
                                 <div class="col-auto my-1">
-                                    <h3>Question 9(maximus)</h3>
+                                    <h3>Question 9</h3>
                                     <h5>Are you extremly determined and devote almost to a fault?</h5>
                                         <select class="col form-control" id="q9">
                                             <option selected>Choose...</option>
@@ -176,7 +173,7 @@
 
                             <div class="form-row align-items-center">
                                     <div class="col-auto my-1">
-                                        <h3>Question 10(edna mode)</h3>
+                                        <h3>Question 10</h3>
                                         <h5>Are you constantly want to design and create things?</h5>
                                             <select class="col form-control" id="q10">
                                                 <option selected>Choose...</option>
@@ -188,63 +185,72 @@
                                             </select>
                                     </div>
                                 </div> 
-                       
-                <button type="button" id='submit' class="btn btn-primary btn-lg btn-block">Submit</button>
-            
+                                       
+            <button type="button" id='submit' class="btn btn-primary btn-lg btn-block">Submit</button>
+
             <a href="/api/friends">API Friend List |</a>
             <a href="#">Git Hub Repo |</a>
             <a href="/">Go Back </a>
 
-        
-<div id='bff-modal' class="modal fade " tabindex="-1" role4="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">New BFF!</h5>
-        
-      </div>
-      <div class="modal-body ">
-        <p id='match'>Here is your match!!.</p>
-        <img id='matchPic' src='' style='max-height: 400px;'>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
+
+        <!-- MODAL -->
+        <div id='bff-modal' class="modal fade " tabindex="-1" role4="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">New BFF!</h5>
+                    </div>
+                    <div class="modal-body ">
+                        <img id='userPic' src='' style='width:55px; height: 55px;' />
+                        <p id='userName' style='display:inline;'></p>
+                        <hr />
+                        <p id='match'></p>
+                        <img id='matchPic' src='' style='max-height: 400px;'>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 </div>
- 
 
-    </div>
-    <script type="text/javascript">
-        $('#submit').on('click', function(){
-            // $('#bff-modal').modal('show');
-            event.preventDefault();
-            var userInput = {
-                name: $('#name').val().trim(),
-                pic: $('#photoLink').val().trim(),
-                score: [ $('#q1').val(),
-                         $('#q2').val(),
-                         $('#q3').val(),
-                         $('#q4').val(),
-                        //  $('#q5').val(), 
-                        //  $('#q6').val(),
-                        //  $('#q7').val(),
-                        //  $('#q8').val(),
-                        //  $('#q9').val(),
-                        //  $('#q10').val(),
-                       ]
-            };
-            console.log('user', userInput);
-
-        $.post('/api/friends', userInput,function(data){
-            $('#match').html(data.name);
+<script type="text/javascript">
+    // on click of the submit button, triggers
+    $('#submit').on('click', function () {
+        // event.preventfault prevents reloading the page
+        event.preventDefault();
+        // grabs user inputs and save info into an array of obj
+        var userInput = {
+            name: $('#name').val().trim(),
+            pic: $('#photoLink').val().trim(),
+            score: [$('#q1').val(),
+            $('#q2').val(),
+            $('#q3').val(),
+            $('#q4').val(),
+                //  $('#q5').val(), 
+                //  $('#q6').val(),
+                //  $('#q7').val(),
+                //  $('#q8').val(),
+                //  $('#q9').val(),
+                //  $('#q10').val(),
+            ]
+        };
+        console.log('user', userInput);
+        // when we get the data back from the post, we input user info to the corresponding divs
+        $.post('/api/friends', userInput, function (data) {
+            // $('#userName').html(userInput.name);
+            var userInputName = $('<p>' + userInput.name + '' + '</p>');
+            var userInputNamePic = $('#userPic').attr('src', userInput.pic) + userInputName;
+            // $('#input-info').html(userInputName).attr(userInputNamePic);
+            $('#userPic').append(userInputNamePic);
+            $('#userName').html(userInputName);
+            $('#match').html('Here is your match: ' + data.name);
             $('#matchPic').attr('src', data.pic);
             $('#bff-modal').modal('toggle');
-          
-
         });
-        });
-    </script>
+    });
+</script>
 </body>
+
 </html>
