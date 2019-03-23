@@ -5,5 +5,5 @@ Using Express to create a full-stack site that will take in results from your us
 * - [x] populate the survey with 10 questions
 * - [x] a compatible match, its name and picture will be       returned based   on user's input.
 * - [x] use the POST and GET routes to retrieve and            request data
-* - [x] deploy to Heroku
+* - [x] deploy to Heroku https://dashboard.heroku.com/apps/friend-finder-ylee       
 
