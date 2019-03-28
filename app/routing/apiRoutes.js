@@ -64,6 +64,8 @@ module.exports = function(app) {
 
       for (var j = 0; j < userScore.length; j++) {
         diff = diff + Math.abs(parseInt(userScore[j]) - parseInt(currentFriend.score[j]));
+        console.log(diff, 'diff')
+        console.log(userScore[j]);
         console.log(currentFriend.name + " line 42 diff", diff);
       }
       if (diff <= bff.score) {
